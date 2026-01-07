@@ -9,10 +9,13 @@ import SwiftUI
 
 struct CommandersView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Commanders")
+            .navigationTitle("Commanders")
     }
 }
 
 #Preview {
-    CommandersView()
+    NavigationStack {
+        CommandersView()
+    }
 }

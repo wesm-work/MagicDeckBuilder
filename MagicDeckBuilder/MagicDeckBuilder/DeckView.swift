@@ -9,10 +9,14 @@ import SwiftUI
 
 struct DeckView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Deck")
+            .navigationTitle("Deck")
     }
 }
 
 #Preview {
-    DeckView()
+    NavigationStack {
+        DeckView()
+    }
 }
+

@@ -11,21 +11,21 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                CommandersView()
+                CommandersView().navigationTitle(Text("Commanders"))
             }
             .tabItem {
                 Label("Commanders", systemImage: "person.3.fill")
             }
 
             NavigationStack {
-                DeckView()
+                DeckView().navigationTitle(Text("Deck"))
             }
             .tabItem {
                 Label("Deck", systemImage: "rectangle.stack.fill")
             }
 
             NavigationStack {
-                CollectionView()
+                CollectionView().navigationTitle(Text("Collection"))
             }
             .tabItem {
                 Label("Collection", systemImage: "books.vertical.fill")
