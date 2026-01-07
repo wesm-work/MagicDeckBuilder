@@ -11,19 +11,24 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                Text("Commanders")
-                    .navigationTitle("Commanders")
+                CommandersView()
             }
             .tabItem {
                 Label("Commanders", systemImage: "person.3.fill")
             }
 
             NavigationStack {
-                Text("Deck")
-                    .navigationTitle("Deck")
+                DeckView()
             }
             .tabItem {
                 Label("Deck", systemImage: "rectangle.stack.fill")
+            }
+
+            NavigationStack {
+                CollectionView()
+            }
+            .tabItem {
+                Label("Collection", systemImage: "books.vertical.fill")
             }
         }
     }

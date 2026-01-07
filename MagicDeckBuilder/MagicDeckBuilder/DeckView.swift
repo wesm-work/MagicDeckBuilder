@@ -1,0 +1,18 @@
+//
+//  DeckView.swift
+//  MagicDeckBuilder
+//
+//  Created by Wes Mincic on 1/6/26.
+//
+
+import SwiftUI
+
+struct DeckView: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+#Preview {
+    DeckView()
+}
