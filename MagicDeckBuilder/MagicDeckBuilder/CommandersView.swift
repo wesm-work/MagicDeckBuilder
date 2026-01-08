@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct CommandersView: View {
+    let commanders = MockCommanders.list
+    
     var body: some View {
-        Text("Commanders")
-            .navigationTitle("Commanders")
+        List(commanders) { commander in
+            Text(commander.name)
+        }
+        .navigationTitle(Text("Commanders"))
     }
+    
 }
 
 #Preview {
