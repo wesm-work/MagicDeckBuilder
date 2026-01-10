@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct CommandersView: View {
-    let commanders = MockCommanders.list
-    
+    let commanders: [Commanders] = MockCommanders.list
+    @State private var searchText = ""
+
+    private var filteredCommanders: [Commanders] {
+        if searchText.isEmpty { return commanders }
+        return commanders.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+    }
+
     var body: some View {
-        List(commanders) { commander in
+        List(filteredCommanders) { commander in
             Text(commander.name)
         }
-        .navigationTitle(Text("Commanders"))
+        .navigationTitle("Commanders")
+        .searchable(text: $searchText)
     }
-    
 }
 
 #Preview {
